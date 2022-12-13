@@ -1,6 +1,6 @@
 import streamlit
 
-streamlit.title('My Moms New Healthy Diner') 
+streamlit.title('My Moms New Healthy Dinner') 
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -46,7 +46,7 @@ import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("use warehouse pc_rivery_wh")
+my_cur.execute("use warehouse compute_wh")
 my_cur.execute("select * from apple")
 my_data_rows = my_cur.fetchone()
 streamlit.text ("The fruit load list contains:")
