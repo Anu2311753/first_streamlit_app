@@ -43,7 +43,7 @@ database = "pc_rivery_db"
 schema = "public"  
 my_cur.execute(" USE WAREHOUSE PC_RIVERY_WH")
 my_cur.execute("SELECT * From PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
-my_data_row = my_cur.fetchall()                                     
+my_data_row = my_cur.fetchcone()                                     
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)                                     
 add_my_fruit = streamlit.text_input('what fruit would you like to add?','jackfruit')
