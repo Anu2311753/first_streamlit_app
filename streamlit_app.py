@@ -54,7 +54,7 @@ streamlit.text(my_data_row)
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cu.execute("select * from banan")
+my_cu.execute("select * from banana")
 my_data_row = my_cur.fetchone()
 streamlit.text("banana:")
 streamlit.text(my_data_row)
