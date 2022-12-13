@@ -56,6 +56,7 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 warehouse = "pc_rivery_wh"
 database = "pc_rivery_db"
+schema = "public"
 my_cu.execute("USE WAREHOUSE PC_RIVERY_WH")
 my_cu.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchall()
